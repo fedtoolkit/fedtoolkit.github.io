@@ -65,7 +65,7 @@
             $('#headBar').width(headAddPercentage + "%")
             $("#headProgressPercentage").text(headAddPercentage.toFixed(1) + "%");
         } else if ($(this).prop("checked") == false) {
-            headAddPercentage = headAddPercentage - headProgressPercentageessCount;
+            headAddPercentage = headAddPercentage - headProgressCount;
             $('#headBar').width(headAddPercentage + "%");
             $("#headProgressPercentage").text(headAddPercentage.toFixed(1) + "%");
         }
@@ -199,7 +199,7 @@
                 $("#resultLoadTime").text(((result.data.runs[1].firstView.fullyLoaded) / 1000).toFixed(2));
                 $("#resultPageSize").text(((result.data.runs[1].firstView.bytesIn) / 1000).toFixed(2));
                 $("#testResultCard").fadeIn();
-                //chart
+                //chart-bytes
                 var htmlSize, cssSize, jsSize, imageSize, fontSize;
                 htmlSize = (result.data.runs[1].firstView.breakdown.html.bytes) / 1000;
                 cssSize = (result.data.runs[1].firstView.breakdown.css.bytes) / 1000;
@@ -207,7 +207,15 @@
                 imageSize = (result.data.runs[1].firstView.breakdown.image.bytes) / 1000;
                 fontSize = (result.data.runs[1].firstView.breakdown.font.bytes) / 1000;
 
-                var container = document.getElementById('chart-area');
+                var htmlRequest, cssRequest, jsRequest, imageRequest, fontRequest;
+                htmlRequest = (result.data.runs[1].firstView.breakdown.html.requests) / 1000;
+                cssRequest = (result.data.runs[1].firstView.breakdown.css.requests) / 1000;
+                jsRequest = (result.data.runs[1].firstView.breakdown.js.requests) / 1000;
+                imageRequest = (result.data.runs[1].firstView.breakdown.image.requests) / 1000;
+                fontRequest = (result.data.runs[1].firstView.breakdown.font.requests) / 1000;
+
+
+                var container = document.getElementById('chart-area-bytes');
                 var data = {
                     categories: ['content'],
                     series: [{
@@ -236,7 +244,7 @@
                     chart: {
                         width: 320,
                         height: 260,
-                        title: 'Web page size breakdown'
+                        title: 'Result breakdown by size'
                     },
                     tooltip: {
                         suffix: 'kb'
@@ -253,6 +261,58 @@
                 tui.chart.pieChart(container, data, options);
 
                 //chart
+
+
+                //chart-requests
+
+
+                var containerReq = document.getElementById('chart-area-requests');
+                var dataReq = {
+                    categories: ['content'],
+                    series: [{
+                            name: 'HTML',
+                            data: htmlRequest
+                        },
+                        {
+                            name: 'Javascript',
+                            data: jsRequest
+                        },
+                        {
+                            name: 'CSS',
+                            data: cssRequest
+                        },
+                        {
+                            name: 'Images',
+                            data: imageRequest
+                        },
+                        {
+                            name: 'Fonts',
+                            data: fontRequest
+                        }
+                    ]
+                };
+                var optionsReq = {
+                    chart: {
+                        width: 320,
+                        height: 260,
+                        title: 'Result breakdown by requests'
+                    },
+                    tooltip: {
+                        suffix: 'kb'
+                    }
+                };
+                var themeReq = {
+                    series: {
+                        colors: [
+                            '#773344', '#E3B5A4', '#F5E9E2', '#0B0014', '#D44D5C',
+                            '#21295C', '#1B3B6F', '#065A82', '#1C7293', '#9EB3C2'
+                        ]
+                    }
+                };
+                tui.chart.pieChart(containerReq, dataReq, optionsReq);
+
+                //chart
+
 
             }
         });
