@@ -1,0 +1,198 @@
+    body {
+        font-family: Product Sans !important;
+    }
+
+    .row {
+        margin-bottom: 0px;
+    }
+
+    #titleCard {
+        background: #6263CD;
+        margin: 0px;
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0px rgba(0, 0, 0, 0.12), 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 0px;
+        font-size: 22px;
+        height: 185px;
+    }
+    /* Scrollbar Styling */
+    /*     ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+     ::-webkit-scrollbar-track {
+        background-color: #ebebeb;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+     ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background: #adadad;
+    }*/
+
+     ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    .card .card-title {
+        font-weight: 500;
+    }
+
+    @media only screen and (min-width: 993px) {
+        .container {
+            width: 90%;
+        }
+    }
+
+    .progress .determinate {
+        background-color: #6263cd;
+    }
+
+    .progress {
+        background-color: #c5c5e4;
+    }
+
+    [type="checkbox"]:checked+span:not(.lever):before {
+        border-right: 2px solid #6263cd;
+        border-bottom: 2px solid #6263cd;
+    }
+
+    .refLink {
+        display: none;
+    }
+
+    .top75 {
+        top: -75px;
+    }
+
+    .chip {
+        color: #252525;
+        font-size: 13px;
+        background-color: #c5c5e4;
+        font-weight: 400;
+        border-radius: 8px;
+        margin-bottom: 0px;
+    }
+
+    .flexDisplay {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sidenav .user-view {
+        position: relative;
+        padding: 32px;
+        text-align: center;
+        background: #7BFAC3;
+    }
+
+    .sidenav .user-view .name {
+        margin-top: 0;
+        background: #3A4856;
+        border-radius: 2px;
+    }
+
+    .profileLink {
+        color: #fff;
+    }
+
+    .spinner-green-only {
+        border-color: #6263CD;
+    }
+
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:not(.browser-default):focus:not([readonly]),
+    input[type=password]:not(.browser-default):focus:not([readonly]),
+    input[type=email]:not(.browser-default):focus:not([readonly]),
+    input[type=url]:not(.browser-default):focus:not([readonly]),
+    input[type=time]:not(.browser-default):focus:not([readonly]),
+    input[type=date]:not(.browser-default):focus:not([readonly]),
+    input[type=datetime]:not(.browser-default):focus:not([readonly]),
+    input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+    input[type=tel]:not(.browser-default):focus:not([readonly]),
+    input[type=number]:not(.browser-default):focus:not([readonly]),
+    input[type=search]:not(.browser-default):focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid #6263CD;
+        -webkit-box-shadow: 0 1px 0 0 #6263CD;
+        box-shadow: 0 1px 0 0 #6263CD;
+    }
+
+    input:not([type]),
+    input[type=text]:not(.browser-default),
+    input[type=password]:not(.browser-default),
+    input[type=email]:not(.browser-default),
+    input[type=url]:not(.browser-default),
+    input[type=time]:not(.browser-default),
+    input[type=date]:not(.browser-default),
+    input[type=datetime]:not(.browser-default),
+    input[type=datetime-local]:not(.browser-default),
+    input[type=tel]:not(.browser-default),
+    input[type=number]:not(.browser-default),
+    input[type=search]:not(.browser-default),
+    textarea.materialize-textarea {
+        margin: 0 0 4px 0;
+    }
+
+    .btn {
+        font-weight: 500;
+        border-radius: 4px;
+        text-transform: none;
+        background-color: #6263CD;
+    }
+
+    .btn:hover,
+    .btn-large:hover,
+    .btn-small:hover {
+        background-color: #6263CD;
+        color: #fff;
+    }
+
+    .input-field .helper-text {
+        color: #fb5b5b;
+    }
+
+    #errMsg {
+        display: none;
+    }
+
+    .rem1 {
+        margin-bottom: 1rem;
+    }
+
+    .fs35 {
+        font-size: 35px;
+    }
+
+    .fs14 {
+        font-size: 14px;
+    }
+
+    .fs12 {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    #testResultCard {
+        display: none;
+    }
+
+    .pageTestSpinner {
+        display: none;
+    }
