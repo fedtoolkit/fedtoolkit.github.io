@@ -197,7 +197,13 @@
         display: none;
     }
 
-    h1{
+    h1 {
         font-size: 22px;
         margin: 0;
+    }
+
+    .page-footer {
+        padding-top: 20px;
+        color: #fff;
+        background-color: #6263CD;
     }
