@@ -14,11 +14,6 @@
 
     $(document).ready(function() {
 
-        $(document).ajaxStart(function() {
-            $(".htmlDataSpinner").fadeIn();
-            console.log("Triggered ajaxStart handler.");
-        });
-
         $(document).ajaxStop(function() {
             $(".htmlDataSpinner").fadeOut();
             console.log("Triggered ajaxStop handler.");
@@ -39,7 +34,6 @@
             } else {
                 runPageTest(pageURL);
                 $("#pageTestBtn").attr('disabled', 'disabled');
-                $("#pageTestBtn").html('Running Webpage test, this can take upto 30 seconds.');
                 $(".pageTestSpinner").fadeIn();
             }
         });
@@ -312,8 +306,6 @@
                 tui.chart.pieChart(containerReq, dataReq, optionsReq);
 
                 //chart
-
-
             }
         });
     }

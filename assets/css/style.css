@@ -208,6 +208,11 @@
         background-color: #6263CD;
     }
 
-    .siteLogo{
+    .siteLogo {
         font-size: 42px;
+    }
+
+    .tui-pie-chart {
+        left: 50% !important;
+        transform: translate(-50%, 0%) !important;
     }
