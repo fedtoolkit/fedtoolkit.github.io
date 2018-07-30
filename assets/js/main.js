@@ -34,7 +34,7 @@
             } else {
                 runPageTest(pageURL);
                 $("#pageTestBtn").attr('disabled', 'disabled');
-                $(".pageTestSpinner").fadeIn();
+                $(".pageTestSpinner").fadeIn();                
             }
         });
         getHeadData();
@@ -150,7 +150,7 @@
     }
 
     function getSEOData() {
-        $.getJSON("https://api.jsonbin.io/b/5b5c95b97b21295367851a3c", function(result) {
+        $.getJSON("https://api.jsonbin.io/b/5b5c95b97b21295367851a3c/1", function(result) {
             SEOItemCount = result.length;
             for (var i = 0; i < result.length; i++) {
                 SEOhtml += "<tr>" +
@@ -178,6 +178,7 @@
         $.getJSON(jsonURL, function(result) {
             pageTestFlag = result;
             if (pageTestFlag.statusCode != 200) {
+                $("#testStatus").text("Status:"+pageTestFlag.statusText);
                 setTimeout(function() {
                     getPageTestJsonData(pageTestJsonUrl);
                 }, 10000);
