@@ -33,6 +33,7 @@
         getSEOData();
 
         $("#pageTestBtn").click(function() {
+            gtag('event', 'Webpage Test', { event_category: 'Web page test', event_action: 'click', event_label: 'Mouse click' });
             var pageURL = $("#webpagetest").val();
             if (pageURL == "") {
                 $("#errMsg").fadeIn();
@@ -45,6 +46,7 @@
         });
 
         $('#webpagetest').keypress(function(e) {
+            gtag('event', 'Webpage Test', { event_category: 'Web page test', event_action: 'click', event_label: 'Enter Button' });
             var key = e.which;
             if (key == 13) {
                 var pageURL = $("#webpagetest").val();
@@ -69,13 +71,16 @@
     });
 
     $(document).on("change", ".headCheckbox", function() {
+
         if ($(this).prop("checked") == true) {
+            gtag('event', 'Head-tag', { event_category: 'Head tag check', event_action: 'click', event_label: 'Checked' });
             $("#headBar").css("width");
             headProgressCount = 100 / headItemCount;
             headAddPercentage = headAddPercentage + headProgressCount;
             $('#headBar').width(headAddPercentage + "%")
             $("#headProgressPercentage").text(headAddPercentage.toFixed(1) + "%");
         } else if ($(this).prop("checked") == false) {
+            gtag('event', 'Head-tag', { event_category: 'Head tag check', event_action: 'click', event_label: 'Unchecked' });
             headAddPercentage = headAddPercentage - headProgressCount;
             $('#headBar').width(headAddPercentage + "%");
             $("#headProgressPercentage").text(headAddPercentage.toFixed(1) + "%");
@@ -83,13 +88,16 @@
     });
 
     $(document).on("change", ".documentCheckbox", function() {
+
         if ($(this).prop("checked") == true) {
+            gtag('event', 'HTML-tag', { event_category: 'HTML section check', event_action: 'click', event_label: 'Checked' });
             $("#documentBar").css("width");
             documentProgressCount = 100 / documentItemCount;
             documentAddPercentage = documentAddPercentage + documentProgressCount;
             $('#documentBar').width(documentAddPercentage + "%")
             $("#documentProgressPercentage").text(documentAddPercentage.toFixed(1) + "%");
         } else if ($(this).prop("checked") == false) {
+            gtag('event', 'HTML-tag', { event_category: 'HTML section check', event_action: 'click', event_label: 'Unchecked' });
             documentAddPercentage = documentAddPercentage - documentProgressCount
             $('#documentBar').width(documentAddPercentage + "%")
             $("#documentProgressPercentage").text(documentAddPercentage.toFixed(1) + "%");
@@ -97,13 +105,16 @@
     });
 
     $(document).on("change", ".speedCheckbox", function() {
+
         if ($(this).prop("checked") == true) {
+            gtag('event', 'Speed-section', { event_category: 'Speed section check', event_action: 'click', event_label: 'Checked' });
             $("#speedBar").css("width");
             speedProgressCount = 100 / speedItemCount;
             speedAddPercentage = speedAddPercentage + speedProgressCount;
             $('#speedBar').width(speedAddPercentage + "%")
             $("#speedProgressPercentage").text(speedAddPercentage.toFixed(1) + "%");
         } else if ($(this).prop("checked") == false) {
+            gtag('event', 'Speed-section', { event_category: 'Speed section check', event_action: 'click', event_label: 'Unchecked' });
             speedAddPercentage = speedAddPercentage - speedProgressCount
             $('#speedBar').width(speedAddPercentage + "%")
             $("#speedProgressPercentage").text(speedAddPercentage.toFixed(1) + "%");
@@ -112,12 +123,14 @@
 
     $(document).on("change", ".SEOCheckbox", function() {
         if ($(this).prop("checked") == true) {
+            gtag('event', 'SEO-section', { event_category: 'SEO section check', event_action: 'click', event_label: 'Checked' });
             $("#SEOBar").css("width");
             SEOProgressCount = 100 / SEOItemCount;
             SEOAddPercentage = SEOAddPercentage + SEOProgressCount;
             $('#SEOBar').width(SEOAddPercentage + "%")
             $("#SEOProgressPercentage").text(SEOAddPercentage.toFixed(1) + "%");
         } else if ($(this).prop("checked") == false) {
+            gtag('event', 'SEO-section', { event_category: 'SEO section check', event_action: 'click', event_label: 'Unchecked' });
             SEOAddPercentage = SEOAddPercentage - SEOProgressCount
             $('#SEOBar').width(SEOAddPercentage + "%")
             $("#SEOProgressPercentage").text(SEOAddPercentage.toFixed(1) + "%");
