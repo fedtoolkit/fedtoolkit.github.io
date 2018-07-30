@@ -27,20 +27,37 @@
             }, 2000);
         }, 3000);
 
+        getHeadData();
+        getDocumentData();
+        getSpeedData();
+        getSEOData();
+
         $("#pageTestBtn").click(function() {
             var pageURL = $("#webpagetest").val();
             if (pageURL == "") {
                 $("#errMsg").fadeIn();
             } else {
+                $("#errMsg").fadeOut();
                 runPageTest(pageURL);
                 $("#pageTestBtn").attr('disabled', 'disabled');
-                $(".pageTestSpinner").fadeIn();                
+                $(".pageTestSpinner").fadeIn();
             }
         });
-        getHeadData();
-        getDocumentData();
-        getSpeedData();
-        getSEOData();
+
+        $('#webpagetest').keypress(function(e) {
+            var key = e.which;
+            if (key == 13) {
+                var pageURL = $("#webpagetest").val();
+                if (pageURL == "") {
+                    $("#errMsg").fadeIn();
+                } else {
+                    $("#errMsg").fadeOut();
+                    runPageTest(pageURL);
+                    $("#pageTestBtn").attr('disabled', 'disabled');
+                    $(".pageTestSpinner").fadeIn();
+                }
+            }
+        });
     });
 
     $(document).on("mouseleave", ".refLinkTD", function() {
@@ -179,7 +196,7 @@
         $.getJSON(jsonURL, function(result) {
             pageTestFlag = result;
             if (pageTestFlag.statusCode != 200) {
-                $("#testStatus").text("Status:"+pageTestFlag.statusText);
+                $("#testStatus").text("Status:" + pageTestFlag.statusText);
                 setTimeout(function() {
                     getPageTestJsonData(pageTestJsonUrl);
                 }, 10000);
@@ -187,7 +204,6 @@
 
             if (pageTestFlag.statusCode == 200) {
                 $("#pageTestBtn").removeAttr('disabled');
-                $("#pageTestBtn").html('Test Successful');
                 $(".pageTestSpinner").fadeOut();
 
                 console.log("JSONtestresult " + result.data);
