@@ -167,6 +167,7 @@
         $.getJSON("https://www.webpagetest.org/runtest.php?k=A.e9e4be6997b03f905a27b10ea1de2234&runs=1&fvonly=1&f=json&url=" + encodeURI(pageURL) + "&location=ap-south-1", function(result) {
             console.log("testresult " + result.data.jsonUrl);
             pageTestJsonUrl = result.data.jsonUrl;
+            $("#testStatus").text("Status: Test started successfully");
             setTimeout(function() {
                 getPageTestJsonData(result.data.jsonUrl);
             }, 25000);
