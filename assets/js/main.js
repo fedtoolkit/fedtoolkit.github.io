@@ -233,110 +233,156 @@
                 fontSize = (result.data.runs[1].firstView.breakdown.font.bytes) / 1000;
 
                 var htmlRequest, cssRequest, jsRequest, imageRequest, fontRequest;
-                htmlRequest = (result.data.runs[1].firstView.breakdown.html.requests) / 1000;
-                cssRequest = (result.data.runs[1].firstView.breakdown.css.requests) / 1000;
-                jsRequest = (result.data.runs[1].firstView.breakdown.js.requests) / 1000;
-                imageRequest = (result.data.runs[1].firstView.breakdown.image.requests) / 1000;
-                fontRequest = (result.data.runs[1].firstView.breakdown.font.requests) / 1000;
+                htmlRequest = (result.data.runs[1].firstView.breakdown.html.requests);
+                cssRequest = (result.data.runs[1].firstView.breakdown.css.requests);
+                jsRequest = (result.data.runs[1].firstView.breakdown.js.requests);
+                imageRequest = (result.data.runs[1].firstView.breakdown.image.requests);
+                fontRequest = (result.data.runs[1].firstView.breakdown.font.requests);
+
+                // var options = {
+                //     chart: {
+                //         width: 380,
+                //         type: 'pie',
+                //     },
+                //     series: [htmlSize, cssSize, jsSize, imageSize, fontSize],
+                //     labels: ['HTML', 'CSS', 'JS', 'Images', 'Fonts']
+
+                // }
+
+                // var chart = new ApexCharts(
+                //     document.querySelector("#chart-area-bytes"),
+                //     options
+                // );
+
+                // chart.render();
+
+                // var options2 = {
+                //     chart: {
+                //         width: 380,
+                //         type: 'pie',
+                //     },
+                //     series: [htmlRequest, cssRequest, jsRequest, imageRequest, fontRequest],
+                //     labels: ['HTML', 'CSS', 'JS', 'Images', 'Fonts']
+
+                // }
+
+                // var chart2 = new ApexCharts(
+                //     document.querySelector("#chart-area-requests"),
+                //     options2
+                // );
+
+                // chart2.render();
 
 
-                var container = document.getElementById('chart-area-bytes');
-                var data = {
-                    categories: ['content'],
-                    series: [{
-                            name: 'HTML',
-                            data: htmlSize
-                        },
-                        {
-                            name: 'Javascript',
-                            data: jsSize
-                        },
-                        {
-                            name: 'CSS',
-                            data: cssSize
-                        },
-                        {
-                            name: 'Images',
-                            data: imageSize
-                        },
-                        {
-                            name: 'Fonts',
-                            data: fontSize
-                        }
-                    ]
-                };
                 var options = {
                     chart: {
-                        width: 320,
-                        height: 260,
-                        title: 'Result breakdown by size'
+                        height: 280,
+                        type: 'bar',
                     },
-                    tooltip: {
-                        suffix: 'kb'
-                    }
-                };
-                var theme = {
-                    series: {
-                        colors: [
-                            '#83b14e', '#458a3f', '#295ba0', '#2a4175', '#289399',
-                            '#289399', '#617178', '#8a9a9a', '#516f7d', '#dddddd'
-                        ]
-                    }
-                };
-                tui.chart.pieChart(container, data, options);
-
-                //chart
-
-
-                //chart-requests
-
-
-                var containerReq = document.getElementById('chart-area-requests');
-                var dataReq = {
-                    categories: ['content'],
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape: 'rounded',
+                            columnWidth: '35%',
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800']
+                    },
                     series: [{
-                            name: 'HTML',
-                            data: htmlRequest
-                        },
-                        {
-                            name: 'Javascript',
-                            data: jsRequest
-                        },
-                        {
-                            name: 'CSS',
-                            data: cssRequest
-                        },
-                        {
-                            name: 'Images',
-                            data: imageRequest
-                        },
-                        {
-                            name: 'Fonts',
-                            data: fontRequest
-                        }
-                    ]
-                };
-                var optionsReq = {
-                    chart: {
-                        width: 320,
-                        height: 260,
-                        title: 'Result breakdown by requests'
+                        name: 'Size',
+                        data: [htmlSize, cssSize, jsSize, imageSize, fontSize]
+                    }],
+                    xaxis: {
+                        categories: ['HTML', 'CSS', 'JS', 'Images', 'Fonts'],
                     },
-                    tooltip: {
-                        suffix: 'kb'
-                    }
-                };
-                var themeReq = {
-                    series: {
-                        colors: [
-                            '#773344', '#E3B5A4', '#F5E9E2', '#0B0014', '#D44D5C',
-                            '#21295C', '#1B3B6F', '#065A82', '#1C7293', '#9EB3C2'
-                        ]
-                    }
-                };
-                tui.chart.pieChart(containerReq, dataReq, optionsReq);
+                    yaxis: {
+                        title: {
+                            text: 'KBs'
+                        }
+                    },
+                    fill: {
+                        opacity: 1
 
-                //chart
+                    },
+
+                    tooltip: {
+                        y: {
+                            formatter: function(val) {
+                                return val + " Kbs"
+                            }
+                        }
+                    }
+                }
+
+                var chart = new ApexCharts(
+                    document.querySelector("#chart-area-bytes"),
+                    options
+                );
+
+                chart.render();
+
+                //2
+
+                var options2 = {
+                    chart: {
+                        height: 280,
+                        type: 'bar',
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape: 'rounded',
+                            columnWidth: '35%',
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        colors: ['#97DFFC', '#858AE3', '#613DC1', '#4E148C', '#2C0735']
+                    },
+                    series: [{
+                        name: 'Size',
+                        data: [htmlRequest, cssRequest, jsRequest, imageRequest, fontRequest]
+                    }],
+                    xaxis: {
+                        categories: ['HTML', 'CSS', 'JS', 'Images', 'Fonts'],
+                    },
+                    yaxis: {
+                        title: {
+                            text: 'Requests'
+                        }
+                    },
+                    fill: {
+                        opacity: 1
+
+                    },
+                    // legend: {
+                    //     floating: true
+                    // },
+                    tooltip: {
+                        y: {
+                            formatter: function(val) {
+                                return val + " requests"
+                            }
+                        }
+                    }
+                }
+
+                var chart2 = new ApexCharts(
+                    document.querySelector("#chart-area-requests"),
+                    options2
+                );
+
+                chart2.render();
             }
         });
     }
