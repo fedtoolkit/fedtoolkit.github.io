@@ -81,160 +81,178 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <!-- Head Tag Content -->
-                    <div class="card top75">
+                    <!-- top card here -->
+                    <!-- top card here -->
+                    <div class="card top75 cardOuter">
                         <div class="card-content">
-                            <span class="card-title">The Head Tag</span>
-                            <div class="chip">
-                                <span id="headProgressPercentage">0%</span>&nbsp;completed</span>
-                            </div>
-                            <div class="progress">
-                                <div class="determinate" id="headBar" style="width: 0%"></div>
-                            </div>
-                            <div class="center-align htmlDataSpinner">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Why?</th>
-                                        <th>Done?</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="headTable">
-                                </tbody>
-                            </table>
+                            <span class="card-title">The Checklist</span>
                         </div>
-                    </div>
-                    <!-- HTML Tag Content -->
-                    <div class="card top75">
-                        <div class="card-content">
-                            <span class="card-title">The HTML Content</span>
-                            <div class="chip">
-                                <span id="documentProgressPercentage">0%</span>&nbsp;completed</span>
-                            </div>
-                            <div class="progress">
-                                <div class="determinate" id="documentBar" style="width: 0%"></div>
-                            </div>
-                            <div class="center-align htmlDataSpinner">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Why?</th>
-                                        <th>Done?</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="documentTable">
-                                </tbody>
-                            </table>
+                        <div class="card-tabs">
+                            <ul class="tabs">
+                                <li class="tab"><a class="active" href="#headTab">Head</a></li>
+                                <li class="tab"><a href="#htmlTab">HTML</a></li>
+                                <li class="tab"><a href="#performanceTab">Performance</a></li>
+                                <li class="tab"><a href="#seoTab">SEO</a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <!-- Speed table Content -->
-                    <div class="card top75">
                         <div class="card-content">
-                            <span class="card-title">Speed Optimisation</span>
-                            <div class="chip">
-                                <span id="speedProgressPercentage">0%</span>&nbsp;completed</span>
-                            </div>
-                            <div class="progress">
-                                <div class="determinate" id="speedBar" style="width: 0%"></div>
-                            </div>
-                            <div class="center-align htmlDataSpinner">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
+                            <div id="headTab">
+                                <div class="row">
+                                    <!-- Head Tag Content -->
+                                    <span class="card-title">The Head Tag</span>
+                                    <div class="chip">
+                                        <span id="headProgressPercentage">0%</span>&nbsp;completed</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="determinate" id="headBar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="center-align htmlDataSpinner">
+                                        <div class="preloader-wrapper small active">
+                                            <div class="spinner-layer spinner-green-only">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <table class="striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Why?</th>
+                                                <th>Done?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="headTable">
+                                        </tbody>
+                                    </table>
+                                    <!-- head -->
                                 </div>
                             </div>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Why?</th>
-                                        <th>Done?</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="speedTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- SEO table Content -->
-                    <div class="card top75">
-                        <div class="card-content">
-                            <span class="card-title">SEO</span>
-                            <div class="chip">
-                                <span id="SEOProgressPercentage">0%</span>&nbsp;completed</span>
-                            </div>
-                            <div class="progress">
-                                <div class="determinate" id="SEOBar" style="width: 0%"></div>
-                            </div>
-                            <div class="center-align htmlDataSpinner">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
+                            <div id="htmlTab">
+                                <div class="row">
+                                    <!-- HTML Tag Content -->
+                                    <span class="card-title">The HTML Content</span>
+                                    <div class="chip">
+                                        <span id="documentProgressPercentage">0%</span>&nbsp;completed</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="determinate" id="documentBar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="center-align htmlDataSpinner">
+                                        <div class="preloader-wrapper small active">
+                                            <div class="spinner-layer spinner-green-only">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <table class="striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Why?</th>
+                                                <th>Done?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="documentTable">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Why?</th>
-                                        <th>Done?</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="SEOTable">
-                                </tbody>
-                            </table>
+                            <div id="performanceTab">
+                                <div class="row">
+                                    <!-- Speed table Content -->
+                                    <span class="card-title">Speed Optimisation</span>
+                                    <div class="chip">
+                                        <span id="speedProgressPercentage">0%</span>&nbsp;completed</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="determinate" id="speedBar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="center-align htmlDataSpinner">
+                                        <div class="preloader-wrapper small active">
+                                            <div class="spinner-layer spinner-green-only">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Why?</th>
+                                                <th>Done?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="speedTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="seoTab">
+                                <div class="row">
+                                    <!-- SEO table Content -->
+                                    <span class="card-title">SEO</span>
+                                    <div class="chip">
+                                        <span id="SEOProgressPercentage">0%</span>&nbsp;completed</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="determinate" id="SEOBar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="center-align htmlDataSpinner">
+                                        <div class="preloader-wrapper small active">
+                                            <div class="spinner-layer spinner-green-only">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Why?</th>
+                                                <th>Done?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="SEOTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- WebpageTest -->
-                    <div class="card top75">
+                    <div class="card top75 cardOuter">
                         <div class="card-content">
                             <span class="card-title">WebPage Performance Test</span>
                             <div class="row">
@@ -264,41 +282,41 @@
                                 </div>
                                 <div class="m8" id="testResultCard">
                                     <div class="col l3 s12">
-                                        <div class=" card card-panel  ">
+                                        <div class="card card-panel cardOuter">
                                             <p class="fs35"><span id="resultLoadTime">0</span><span class="fs14">&nbsp;s</span></p>
                                             <span>Load time</span>
                                             <span class=""></span>
                                         </div>
                                     </div>
                                     <div class="col l3 s12">
-                                        <div class=" card card-panel  ">
+                                        <div class="card card-panel cardOuter">
                                             <p class="fs35"><span id="resultPageSize">0</span><span class="fs14">&nbsp;kbs</span></p>
                                             <span>Page size</span>
                                             <span class=""></span>
                                         </div>
                                     </div>
                                     <div class="col l3 s12">
-                                        <div class=" card card-panel  ">
+                                        <div class="card card-panel cardOuter">
                                             <p class="fs35"><span id="resultPageHttp">0</span></p>
                                             <span>HTTP requests</span>
                                             <span class=""></span>
                                         </div>
                                     </div>
                                     <div class="col l3 s12">
-                                        <div class="card card-panel">
+                                        <div class="card card-panel cardOuter">
                                             <p class="fs35">India</p>
                                             <span>Tested from</span>
                                             <span class=""></span>
                                         </div>
                                     </div>
                                     <div class="col l6">
-                                        <div class="card card-panel">
+                                        <div class="card card-panel cardOuter">
                                             <span class="card-title">Breakdown by size</span>
                                             <div id="chart-area-bytes" class="center-align"></div>
                                         </div>
                                     </div>
                                     <div class="col l6">
-                                        <div class="card card-panel">
+                                        <div class="card card-panel cardOuter">
                                             <span class="card-title">Breakdown by requests</span>
                                             <div id="chart-area-requests" class="center-align"></div>
                                         </div>
@@ -308,6 +326,141 @@
                             </div>
                         </div>
                     </div>
+                    <!-- page test end -->
+                    <!-- Google Analytics Event generator -->
+                    <div class="card top75 cardOuter">
+                        <div class="card-content">
+                            <span class="card-title">GA Event snippet generator</span>
+                        </div>
+                        <div class="card-tabs">
+                            <ul class="tabs">
+                                <li class="tab"><a class="active" href="#test4">Universal Analytics (gtag.js)</a></li>
+                                <li class="tab"><a href="#test5">Deprecated GA (ga.js)</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content">
+                            <div id="test4">
+                                <div class="row">
+                                    <div class="input-field col s12 l3">
+                                        <input id="newGaEventAct" type="text" class="validate">
+                                        <label for="newGaEventAct">Event Action</label>
+                                        <span class="helper-text" id="newErrMsgGAAct"></span>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="newGaEventCat" type="text" class="validate">
+                                        <label for="newGaEventCat" class="active">Event Category</label>
+                                        <span class="helper-text" id="newErrMsgGACat"></span>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="newGaEventLbl" type="text" class="validate">
+                                        <label for="newGaEventLbl">Event Label (optional)</label>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="newGaEventVal" type="text" class="validate">
+                                        <label for="newGaEventVal">Event Value (optional)</label>
+                                    </div>
+                                    <div class="col s12 rem1 valign-wrapper">
+                                        <div class="col l2 s12">
+                                            <a class="waves-effect waves-light btn btn-ga btn-cp" id="newGaGen">Generate</a>
+                                        </div>
+                                        <div class="col l10 s12">
+                                            <span id="newGaCodeGenerated" class="tooltipped grey darken-1 GaCodeGenerated" data-position="bottom" data-tooltip="Click to copy" onclick="copyToClipboard('#newGaCodeGenerated')">
+                                                    gtag('event', <span id="newActVal">[action]</span>, { 'event_category': <span id="newCatVal">[category]</span>, 'event_label': <span id="newLblVal">[label]</span>, 'value': <span id="newValVal">[value]</span> });
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="test5">
+                                <div class="row">
+                                    <div class="input-field col s12 l3">
+                                        <input id="gaEventCat" type="text" class="validate">
+                                        <label for="gaEventCat" class="active">Event Category</label>
+                                        <span class="helper-text" id="errMsgGACat"></span>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="gaEventAct" type="text" class="validate">
+                                        <label for="gaEventAct">Event Action</label>
+                                        <span class="helper-text" id="errMsgGAAct"></span>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="gaEventLbl" type="text" class="validate">
+                                        <label for="gaEventLbl">Event Label (optional)</label>
+                                    </div>
+                                    <div class="input-field col s12 l3">
+                                        <input id="gaEventVal" type="text" class="validate">
+                                        <label for="gaEventVal">Event Value (optional)</label>
+                                    </div>
+                                    <div class="col s12 rem1 valign-wrapper">
+                                        <div class="col l2 s12">
+                                            <a class="waves-effect waves-light btn btn-ga" id="oldGaGen">Generate</a>
+                                        </div>
+                                        <div class="col l10 s12">
+                                            <span id="oldGaCodeGenerated" class="tooltipped grey darken-1 GaCodeGenerated" data-position="bottom" data-tooltip="Click to copy" onclick="copyToClipboard('#oldGaCodeGenerated')">
+                                                    ga('send', 'event', <span id="oldCatVal">[eventCategory]</span>, <span id="oldActVal">[eventAction]</span>, <span id="oldLblVal">[eventLabel]</span>, <span id="oldValVal">[eventValue]</span>);
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Google Analytics Event generator end -->
+                    <!-- URL Encoder/Decoder -->
+                    <div class="card top75 cardOuter">
+                        <div class="card-content">
+                            <span class="card-title">Text & URL Encoder/Decoder</span>
+                        </div>
+                        <div class="card-tabs">
+                            <ul class="tabs">
+                                <li class="tab"><a class="active" href="#encoderTab">Encoder</a></li>
+                                <li class="tab"><a href="#decoderTab">Decoder</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content">
+                            <div id="encoderTab">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="encoderInput" type="text" class="validate">
+                                        <label for="encoderInput">Enter text/url to encode</label>
+                                        <span class="helper-text" id="errMsgEnc">Enter Something</span>
+                                    </div>
+                                    <div class="col s12 rem1 valign-wrapper">
+                                        <div class="col l2 s12">
+                                            <a class="waves-effect waves-light btn btn-ga" id="encodeBtn">Encode</a>
+                                        </div>
+                                        <div class="col l10 s12">
+                                            <span id="encodedText" class="tooltipped grey darken-1 GaCodeGenerated" data-position="bottom" data-tooltip="Click to copy" onclick="copyToClipboard('#encodedText')">
+                                                    Your encoded text will be shown here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="decoderTab">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="decoderInput" type="text" class="validate">
+                                        <label for="decoderInput">Enter text/url to decode</label>
+                                        <span class="helper-text" id="errMsgDec">Enter Something</span>
+                                    </div>
+                                    <div class="col s12 rem1 valign-wrapper">
+                                        <div class="col l2 s12">
+                                            <a class="waves-effect waves-light btn btn-ga" id="decodeBtn">Decode</a>
+                                        </div>
+                                        <div class="col l10 s12">
+                                            <span id="decodedText" class="tooltipped grey darken-1 GaCodeGenerated" data-position="bottom" data-tooltip="Click to copy" onclick="copyToClipboard('#decodedText')">
+                                                    Your decoded text will be shown here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Google Analytics Event generator end -->
+                </div>
+                <div class="col s12">
                 </div>
             </div>
             <ul id="slide-out" class="sidenav">

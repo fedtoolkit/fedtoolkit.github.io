@@ -12,7 +12,20 @@
         SEOProgressCount = 0,
         pageTestFlag, pageTestJsonUrl;
 
+
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $(element).attr('data-tooltip', 'Copied');
+        $temp.remove();
+        setTimeout(function(){ $(element).attr('data-tooltip', 'Click to copy'); }, 3000);
+    }
+
+
     $(document).ready(function() {
+        M.AutoInit();
 
         $(document).ajaxStop(function() {
             $(".htmlDataSpinner").fadeOut();
@@ -31,6 +44,30 @@
         getDocumentData();
         getSpeedData();
         getSEOData();
+
+        $("#encodeBtn").click(function() {
+            var toEncode = $("#encoderInput").val();
+            if (toEncode == "") {
+                $("#errMsgEnc").fadeIn();
+            } else {
+                $("#errMsgEnc").fadeOut();
+                var encoded = encodeURI(toEncode);
+                $("#encodedText").html(encoded);
+            }
+        });
+
+        $("#decodeBtn").click(function() {
+            var toDecode = $("#decoderInput").val();
+            if (toDecode == "") {
+                $("#errMsgDec").fadeIn();
+            } else {
+                $("#errMsgDec").fadeOut();
+                var decoded = decodeURI(toDecode);
+                $("#decodedText").html(decoded);
+            }
+        });
+
+
 
         $("#pageTestBtn").click(function() {
             gtag('event', 'Webpage Test', { event_category: 'Web page test', event_action: 'click', event_label: 'Mouse click' });
@@ -58,6 +95,55 @@
                     $("#pageTestBtn").attr('disabled', 'disabled');
                     $(".pageTestSpinner").fadeIn();
                 }
+            }
+        });
+
+        $("#oldGaGen").click(function() {
+            var eventCat, eventAct, eventLbl, eventVal;
+            eventCat = $("#gaEventCat").val();
+            eventAct = $("#gaEventAct").val();
+            eventLbl = $("#gaEventLbl").val();
+            eventVal = $("#gaEventVal").val();
+            if (eventCat == "" || eventCat == undefined) {
+                $("#errMsgGACat").text("Enter something");
+            }
+            if (eventAct == "" || eventAct == undefined) {
+                $("#errMsgGAAct").text("Enter something");
+            } else {
+                $("#errMsgGACat").fadeOut();
+                $("#errMsgGAAct").fadeOut();
+                //assign Vals
+                $("#oldCatVal").text("'" + eventCat + "'");
+                $("#oldActVal").text("'" + eventAct + "'");
+                $("#oldLblVal").text("'" + eventLbl + "'");
+                $("#oldValVal").text("'" + eventVal + "'");
+
+            }
+        });
+
+
+
+        //gtag event generator
+        $("#newGaGen").click(function() {
+            var eventCat, eventAct, eventLbl, eventVal;
+            eventCat = $("#newGaEventCat").val();
+            eventAct = $("#newGaEventAct").val();
+            eventLbl = $("#newGaEventLbl").val();
+            eventVal = $("#newGaEventVal").val();
+            if (eventCat == "" || eventCat == undefined) {
+                $("#newErrMsgGACat").text("Enter something");
+            }
+            if (eventAct == "" || eventAct == undefined) {
+                $("#newErrMsgGAAct").text("Enter something");
+            } else {
+                $("#newErrMsgGACat").fadeOut();
+                $("#newErrMsgGAAct").fadeOut();
+                //assign Vals
+                $("#newCatVal").text("'" + eventCat + "'");
+                $("#newActVal").text("'" + eventAct + "'");
+                $("#newLblVal").text("'" + eventLbl + "'");
+                $("#newValVal").text("'" + eventVal + "'");
+
             }
         });
     });

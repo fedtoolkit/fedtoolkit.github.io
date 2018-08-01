@@ -15,7 +15,8 @@
         height: 185px;
     }
     /* Scrollbar Styling */
-         ::-webkit-scrollbar {
+
+     ::-webkit-scrollbar {
         width: 6px;
     }
 
@@ -30,8 +31,7 @@
         border-radius: 4px;
         background: #adadad;
     }
-
-/*     ::-webkit-scrollbar {
+    /*     ::-webkit-scrollbar {
         display: none;
     }*/
 
@@ -45,7 +45,8 @@
         flex: 1 0 auto;
     }
 
-    .card {
+
+    .cardOuter {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
         border-radius: 8px;
     }
@@ -168,8 +169,12 @@
         color: #fb5b5b;
     }
 
-    #errMsg {
+    #errMsg, #errMsgEnc, #errMsgDec {
         display: none;
+    }
+
+    .errMsgEnc{
+
     }
 
     .rem1 {
@@ -212,7 +217,47 @@
         font-size: 42px;
     }
 
-    .tui-pie-chart {
-        left: 50% !important;
-        transform: translate(-50%, 0%) !important;
+    .tabs .tab a {
+        color: #0000004d;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .tabs .tab a:hover,
+    .tabs .tab a.active {
+        background-color: transparent;
+        color: #000000;
+    }
+
+    .tabs .indicator {
+        background-color: #6263CD;
+    }
+
+    .tabs .tab {
+        text-transform: none;
+    }
+
+    .tabs .tab a:focus,
+    .tabs .tab a:focus.active {
+        background-color: rgba(98, 99, 205, 0.2);
+        outline: none;
+    }
+
+    .btn-ga{
+        display: block;
+    }
+
+    .GaCodeGenerated {
+        padding: 7px;
+        display: block;
+        text-align: center;
+        color: #fff;
+        border-radius: 4px;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    }
+
+    .input-field input[type=text]:not(.browser-default):focus:not([readonly])+label{
+        color: #6263CD;
     }
